@@ -26,6 +26,8 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -138,6 +140,8 @@ function Header() {
                         <>
                             <Tippy delay={[0, 300]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
+                                    {/* dont know why it's not working??? */}
+                                    {/* <UploadIcon /> */}
                                     <FontAwesomeIcon icon={faUpload} />
                                 </button>
                             </Tippy>
@@ -151,10 +155,11 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://i1.wp.com/blackpinkupdate.com/wp-content/uploads/2019/02/BLACKPINK-Lisa-Instagram-Moonshot.jpg?ssl=1"
                                 alt="user-avatar"
                                 className={cx('user-avatar')}
+                                fallback="https://th.bing.com/th/id/R.4598adf9ff249a30efdbb31650e82e27?rik=nTcIrjiGjpGIFQ&riu=http%3a%2f%2finspirationseek.com%2fwp-content%2fuploads%2f2016%2f02%2fCute-Dog-Images.jpg&ehk=%2fDDngdNA%2bebjrLjv8nS0U7xOTwznhNHrZOMRAXMC57Y%3d&risl=&pid=ImgRaw&r=0"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
