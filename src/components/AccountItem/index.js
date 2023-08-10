@@ -1,5 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './AccountItem.module.scss';
+
+import Image from '~/components/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCableCar, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,7 +10,7 @@ const cx = classNames.bind(styles);
 function AccountItem() {
     return (
         <div className={cx('wrapper')}>
-            <img
+            <Image
                 className={cx('avatar')}
                 src="https://th.bing.com/th/id/OIP.bLEf672a2EQFbBLmQqrPwAHaJQ?pid=ImgDet&rs=1"
                 alt="Thuan"
