@@ -1,5 +1,5 @@
-function Porfile() {
-    return <h2>Porfile page</h2>;
+function Profile() {
+    return <h2>Profile page</h2>;
 }
 
-export default Porfile;
+export default Profile;
